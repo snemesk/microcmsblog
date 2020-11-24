@@ -1,10 +1,25 @@
 <template>
   <div>
+  <div class="nav">
+    <NuxtLink to="/">
+      <h1>obisuki</h1>
+    </NuxtLink>
+    <NuxtLink to="/about">
+      About
+    </NuxtLink>
+    <NuxtLink to="/contact">
+      問い合わせ
+    </NuxtLink>
+  </div>
     <Nuxt />
   </div>
 </template>
 
 <style>
+.nav {
+    background: lightskyblue;
+}
+
 html {
   font-family:
     'Source Sans Pro',
