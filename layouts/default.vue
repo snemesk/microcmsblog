@@ -1,23 +1,86 @@
 <template>
   <div>
-  <div class="nav">
-    <NuxtLink to="/">
-      <h1>obisuki</h1>
-    </NuxtLink>
-    <NuxtLink to="/about">
-      About
-    </NuxtLink>
-    <NuxtLink to="/contact">
-      問い合わせ
-    </NuxtLink>
+  <div class="top">
+      <div class="header__flex">
+            <NuxtLink to="/">
+          <h1>Obisuki</h1>
+        </NuxtLink></li>
+    <nav>
+      <ul>
+        <li>
+          <NuxtLink to="/about">このサイトについて</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/contact">問い合わせ</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <div class="navtop">
+
+    <nav>
+    <div class="nav">
+      <ul>
+      </ul>
+    </div>
+    </nav>
+    </div>
   </div>
     <Nuxt />
   </div>
 </template>
 
 <style>
-.nav {
+  * {
+ margin: 0;
+ padding: 0;
+}
+ul {
+  list-style:none;
+}
+
+.header__flex {
+  display: flex;
+  height:60px;
+  align-items: center;
+}
+.header__flex nav {
+  margin-left: auto;
+}
+.header__flex ul {
+  display: flex;
+}
+.header__flex ul li {
+  margin-left: 20px;
+}
+
+.top {
     background: lightskyblue;
+        margin-bottom: 10px;
+}
+.navtop {
+  max-width: 1100px;
+  margin: auto;
+}
+ul {
+  list-style:none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav nav {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+
+  li:first-child {
+    margin-right: auto;
+  }
+}
+.nav ul li {
+  margin-left: 20px;
 }
 
 html {
