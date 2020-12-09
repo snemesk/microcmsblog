@@ -2,9 +2,9 @@
   <div>
   <div class="top">
       <div class="header__flex">
-            <NuxtLink to="/">
+        <NuxtLink to="/">
           <h1>Obisuki</h1>
-        </NuxtLink></li>
+        </NuxtLink>
     <nav>
       <ul>
         <li>
