@@ -90,7 +90,7 @@ user agent stylesheet
 section {
     display: block;
 }
-.contents{
+.blog{
   width: 800px;
 }
 </style>
