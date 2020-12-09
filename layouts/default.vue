@@ -43,6 +43,8 @@ ul {
   display: flex;
   height:60px;
   align-items: center;
+  width: 1000px;
+  margin: auto;
 }
 .header__flex nav {
   margin-left: auto;

@@ -56,6 +56,7 @@ return data
 }
 
 </script>
+
 <style lang="scss" scoped>
 .bar.background-image-fixed-2 {
     background: url();
@@ -89,7 +90,7 @@ user agent stylesheet
 section {
     display: block;
 }
-.blog{
+.contents{
   width: 800px;
 }
 </style>
