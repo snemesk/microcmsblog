@@ -58,3 +58,20 @@ export default {
   build: {
   }
 }
+module.exports = {
+    /*
+    ** Headers of the page
+    */
+    head: {
+      script: [
+        {
+          hid: 'twitter',
+          type: 'text/javascript',
+          src: '//platform.twitter.com/widgets.js',
+          async: true,
+          defer: true,
+          body: true
+        }
+      ],
+    }
+  }
