@@ -91,6 +91,6 @@ section {
     display: block;
 }
 .blog{
-  text-align: 800px;
+  width: 800px;
 }
 </style>
