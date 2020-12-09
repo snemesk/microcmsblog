@@ -46,6 +46,7 @@ ul {
   width: 1000px;
   margin: auto;
 }
+
 .header__flex nav {
   margin-left: auto;
 }
@@ -57,7 +58,6 @@ ul {
 }
 
 .top {
-  width: 1200px;
   margin: auto;
   background: lightskyblue;
 }
