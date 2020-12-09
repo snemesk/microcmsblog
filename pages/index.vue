@@ -1,5 +1,17 @@
 <template>
 <div class="contents">
+    <section class="bar background-image-fixed-2 no-mb color-white text-center">
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>テキスト</h3>
+                <p class="lead">さぶたいとる</p>
+
+            </div>
+        </div>
+    </div>
+  </section>
   <ul>
     <li v-for="content in contents" :key="content.id">
       <nuxt-link :to="`/${content.id}`">
