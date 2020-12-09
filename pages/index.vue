@@ -39,11 +39,10 @@
   </section>
   <section>
   <a class="twitter-timeline" href="https://twitter.com/obisuki_food?ref_src=twsrc%5Etfw">Tweets by obisuki_food</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
   </section>
 </template>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
-</script>
 <script>
 import axios from 'axios'
 export default {
