@@ -57,8 +57,7 @@ ul {
 .top {
   width: 1200px;
   margin: auto;
-    background: lightskyblue;
-        margin-bottom: 10px;
+  background: lightskyblue;
 }
 .navtop {
   max-width: 1100px;
