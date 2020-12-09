@@ -26,8 +26,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="blog">
+  </section>
+  <section class="blog">
   <ul>
     <li v-for="content in contents" :key="content.id">
       <nuxt-link :to="`/${content.id}`">
@@ -36,8 +36,7 @@
       {{ new Date(content.publishedAt).toLocaleDateString() }}
     </li>
   </ul>
-</div>
-</section>
+  </section>
 </template>
 
 <script>
