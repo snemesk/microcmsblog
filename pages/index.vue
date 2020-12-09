@@ -1,4 +1,3 @@
-
 <template>
   <ul>
     <li v-for="content in contents" :key="content.id">
