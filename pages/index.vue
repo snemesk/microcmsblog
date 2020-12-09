@@ -66,7 +66,7 @@ return data
 
 .bar {
     position: relative;
-    background: #467fbf;
+    background: #858b92;
     padding: 60px 0;
 }
 .no-mb {
