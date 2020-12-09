@@ -75,9 +75,6 @@ return data
 .text-center {
     text-align: center;
 }
-section, div.section {
-    margin-bottom: 40px;
-}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
