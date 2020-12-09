@@ -1,4 +1,8 @@
 <template>
+<div class="image">
+
+</div>
+<div class="contents">
   <ul>
     <li v-for="content in contents" :key="content.id">
       <nuxt-link :to="`/${content.id}`">
@@ -7,6 +11,7 @@
       {{ new Date(content.publishedAt).toLocaleDateString() }}
     </li>
   </ul>
+</div>
 </template>
 <script>
 import axios from 'axios'
