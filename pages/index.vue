@@ -92,5 +92,6 @@ section {
 }
 .blog{
   width: 800px;
+  margin: auto;
 }
 </style>
