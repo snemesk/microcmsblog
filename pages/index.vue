@@ -31,7 +31,23 @@
   <div class="post-card -center">
     <div v-for="content in contents" :key="content">
       <div class="content">
-       <img :src="thumbnail.url" @error="noImage">
+        <picture v-if="content.thumbnail">
+        <source
+        media="(min-width: 768px)"
+        type="image/webp"
+        :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
+        />
+        <source
+        media="(max-width: 768px)"
+        type="image/webp"
+        :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
+        />
+        <img
+        :src="`${content.thumbnail.url}?w=1200`"
+        class="thumbnail"
+        alt
+        />
+        </picture>
       </div>
       <div class="card__content">
         <h5 class="card__content-category">{{ content.title }}</h5>
@@ -51,7 +67,6 @@
 <script>
 import axios from 'axios'
 export default {
-
 async asyncData() {
 const { data } = await axios.get(
 // your-service-id
@@ -62,18 +77,10 @@ headers: { 'X-API-KEY': 'c7ad9a8b-095d-47ca-a933-2af56bc189dc' }
 }
 )
 return data
-}
-}
-</script>
-<script>
-export default {
-    methods : {
-    noImage(element){
-      element.target.src = 'https://placehold.jp/600x300.png'
-    }
-  }
+},
 }
 </script>
+
 <style lang="scss" scoped>
 .bar.background-image-fixed-2 {
     background-size: cover;

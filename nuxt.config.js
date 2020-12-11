@@ -30,6 +30,7 @@ export default {
   */
   css: [
     '@/assets/css/style.css',
+    '@/assets/css/custom_bootstrap.css',
   ],
   /*
   ** Plugins to load before mounting the App
