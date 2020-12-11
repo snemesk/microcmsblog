@@ -28,22 +28,30 @@
     </div>
   </section>
   <section class="blog">
-  <ul>
-    <li v-for="content in contents" :key="content.id">
-      <nuxt-link :to="`/${content.id}`">
-      {{ content.title }}
-      </nuxt-link>
-      {{ new Date(content.publishedAt).toLocaleDateString() }}
-    </li>
-  </ul>
-  </section>
-  <section>
-<a class="twitter-timeline" href="https://twitter.com/obisuki_food?ref_src=twsrc%5Etfw">Tweets by obisuki_food</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <div class="post-card -center">
+    <div v-for="content in contents" :key="content">
+      <div class="content">
+       <img :src="thumbnail.url" @error="noImage">
+      </div>
+      <div class="card__content">
+        <h5 class="card__content-category">{{ content.title }}</h5>
+        <nuxt-link :to="`/${content.id}`">
+         {{ content.title }}
+        </nuxt-link>
+        <div class="card__content-info">
+          <div class="info__time">
+            <p>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </section>
 </template>
 <script>
 import axios from 'axios'
 export default {
+
 async asyncData() {
 const { data } = await axios.get(
 // your-service-id
@@ -56,12 +64,18 @@ headers: { 'X-API-KEY': 'c7ad9a8b-095d-47ca-a933-2af56bc189dc' }
 return data
 }
 }
-
 </script>
-
+<script>
+export default {
+    methods : {
+    noImage(element){
+      element.target.src = 'https://placehold.jp/600x300.png'
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .bar.background-image-fixed-2 {
-    background: url();
     background-size: cover;
     background-position-y: 50%;
 }

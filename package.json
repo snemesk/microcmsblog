@@ -12,7 +12,11 @@
     "axios": "^0.20.0",
     "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",
+    "nuxt-fontawesome": "^0.4.0",
     "sass-loader": "^10.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/vue-fontawesome": "^2.0.0"
+  }
 }

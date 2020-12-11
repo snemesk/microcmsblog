@@ -1,40 +1,44 @@
 <template>
   <div>
-  <div class="top">
-      <div class="header__flex">
-        <NuxtLink to="/">
-          <h1>Obisuki</h1>
-        </NuxtLink>
-    <nav>
-      <ul>
-        <li>
-          <NuxtLink to="/about">このサイトについて</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/contact">問い合わせ</NuxtLink>
-        </li>
-      </ul>
-    </nav>
-  </div>
-    <div class="navtop">
-
-    <nav>
-    <div class="nav">
-      <ul>
-      </ul>
-    </div>
-    </nav>
-    </div>
-  </div>
-    <Nuxt />
+    <Header />
+    <main>
+      <Nuxt />
+    </main>
+    <Footer />
   </div>
 </template>
 
+<script>
+	import Header from "@/components/header.vue"; // headerをインポート
+	import Footer from "@/components/footer.vue"; // footerをインポート
+	export default {
+		components: {
+			Header,
+			Footer
+		}
+	};
+</script>
 <style>
-  * {
+* {
  margin: 0;
  padding: 0;
 }
+	main {
+		min-height: 600px;
+		background-color: #ddd;
+		text-align: center;
+		padding: 30px;
+	}
+	.page-enter-active,
+	.page-leave-active {
+		transition: 0.5s cubic-bezier(1, 0.25, 0.25, 1);
+	}
+	.page-enter,
+	.page-leave-active {
+		opacity: 0;
+		transform: translate(0, 30px);
+	}
+
 ul {
   list-style:none;
 }
@@ -58,8 +62,9 @@ ul {
 }
 
 .top {
+  width: 1200px;
   margin: auto;
-  background: lightskyblue;
+
 }
 .navtop {
   max-width: 1100px;
@@ -77,10 +82,6 @@ ul {
 }
 .nav ul {
   display: flex;
-
-  li:first-child {
-    margin-right: auto;
-  }
 }
 .nav ul li {
   margin-left: 20px;
