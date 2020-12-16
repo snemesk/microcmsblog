@@ -1,69 +1,48 @@
 <template>
-<div class="contents">
-    <section class="bar background-image-fixed-2 no-mb color-white text-center">
+  <div id="content">
     <div class="container">
-        <div class="row">
-                <h3>テキスト</h3>
-                <p class="lead">さぶたいとる</p>
-        </div>
-    </div>
-  </section>
-  <section class="bar background-white">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="box-simple">
-                        <a href="">
-                            <div class="icon">
-                                <i class=""></i>
-                            </div>
-                        </a>
-                        <h3></h3>
-                        <p></p>
-                    </div>
-                </div>
+      <div class="blog-masonry">
+        <div v-for="content in contents" :key="content">
+          <div class="post-card -center"><a class="card__cover" href="/{{ content.id }}">
+          <picture v-if="content.thumbnail">
+          <source
+          media="(min-width: 768px)"
+          type="image/webp"
+          :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
+          />
+          <source
+          media="(max-width: 768px)"
+          type="image/webp"
+          :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
+          />
+          <img
+          :src="`${content.thumbnail.url}?w=1200`"
+          class="thumbnail"
+          alt
+          />
+          </picture>
+          </a>
+          <div class="card__content">
+            <h5 class="card__content-category"></h5>
+            <nuxt-link class="card__content-title" :to="`/${content.id}`">
+            {{ content.title }}
+            </nuxt-link>
+            <div class="card__content-info">
+              <div class="info__time"><i class="far fa-clock"></i>
+                <p>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
+              </div>
+              <div class="info__comment"><i class="far fa-comment"></i>
+                <p></p>
+              </div>
             </div>
-        </div>
-    </div>
-  </section>
-  <section class="blog">
-  <div class="post-card -center">
-    <div v-for="content in contents" :key="content">
-      <div class="content">
-        <picture v-if="content.thumbnail">
-        <source
-        media="(min-width: 768px)"
-        type="image/webp"
-        :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
-        />
-        <source
-        media="(max-width: 768px)"
-        type="image/webp"
-        :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
-        />
-        <img
-        :src="`${content.thumbnail.url}?w=1200`"
-        class="thumbnail"
-        alt
-        />
-        </picture>
-      </div>
-      <div class="card__content">
-        <h5 class="card__content-category">{{ content.title }}</h5>
-        <nuxt-link :to="`/${content.id}`">
-         {{ content.title }}
-        </nuxt-link>
-        <div class="card__content-info">
-          <div class="info__time">
-            <p>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </div>
-  </section>
 </template>
+
 <script>
 import axios from 'axios'
 export default {

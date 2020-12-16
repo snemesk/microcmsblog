@@ -1,4 +1,5 @@
 <template>
+<div id="content">
 <main class="main">
 <picture v-if="thumbnail">
 <source
@@ -22,6 +23,7 @@
 <p class="category">{{ category && category.name }}</p>
 <div class="post" v-html="body"></div>
 </main>
+</div>
 </template>
 <script>
 import axios from 'axios'
