@@ -30,6 +30,7 @@ export default {
   */
   css: [
     '@/assets/css/style.css',
+    '@/assets/css/elegant.css',
     '@/assets/css/custom_bootstrap.css',
   ],
   /*
