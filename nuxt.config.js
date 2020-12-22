@@ -30,7 +30,6 @@ export default {
   */
   css: [
     '@/assets/css/style.css',
-    '@/assets/css/elegant.css',
     '@/assets/css/custom_bootstrap.css',
   ],
   /*
@@ -47,35 +46,14 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
-  /*
-  ** Build configuration
-  ** See https://nuxtjs.org/api/configuration-build/
-  */
-  build: {
-  },
-  }
-  module.exports = {
 
-    /*
-    ** Headers of the page
-    */
-    head: {
-      script: [
-        {
-          hid: 'twitter',
-          type: 'text/javascript',
-          src: '//platform.twitter.com/widgets.js',
-          async: true,
-          defer: true,
-          body: true
-        }
-      ],
-    }
-  }
+ modules: [
+  'nuxt-fontawesome'
+],
+fontawesome: {
+  component: 'fa'
+}
+}
+
+
+

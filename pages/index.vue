@@ -60,6 +60,7 @@ return data
 }
 </script>
 
+
 <style lang="scss" scoped>
 .bar.background-image-fixed-2 {
     background-size: cover;
