@@ -31,6 +31,10 @@ export default {
   css: [
     '@/assets/css/style.css',
     '@/assets/css/custom_bootstrap.css',
+    '@fortawesome/fontawesome-free-webfonts',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-brands.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+    '@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -47,12 +51,6 @@ export default {
   ** Nuxt.js dev-modules
   */
 
- modules: [
-  'nuxt-fontawesome'
-],
-fontawesome: {
-  component: 'fa'
-}
 }
 
 

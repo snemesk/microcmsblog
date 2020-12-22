@@ -13,21 +13,10 @@
           </nav>
           <div class="header__icon-group">
             <div class="social">
-              <a href="https://twitter.com/2MByte_nesk"><fa :icon="faTwitter" /></a>
+              <a href="https://twitter.com/2MByte_nesk"><i class="fab fa-twitter-square"></i></a>
             </div>
           </div>
         </div>
       </div>
     </header>
 </template>
-
-<script>
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-export default {
-  computed: {
-    faTwitter () {
-      return faTwitter
-    }
-  }
-}
-</script>
