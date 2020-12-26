@@ -1,44 +1,54 @@
 <template>
+<div>
+      <section class="bar background-image1 no-mb color-white text-center">
+        <div >
+          <h1>テスト</h1>
+        </div>
+      </section>
   <div id="content">
     <div class="container">
-      <div class="blog-masonry">
-        <div v-for="content in contents" :key="content">
-          <div class="post-card -center"><a class="card__cover" href="/{{ content.id }}">
-          <picture v-if="content.thumbnail">
-          <source
-          media="(min-width: 768px)"
-          type="image/webp"
-          :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
-          />
-          <source
-          media="(max-width: 768px)"
-          type="image/webp"
-          :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
-          />
-          <img
-          :src="`${content.thumbnail.url}?w=1200`"
-          class="thumbnail"
-          alt
-          />
-          </picture>
-          </a>
-          <div class="card__content">
-            <h5 class="card__content-category"></h5>
-            <nuxt-link class="card__content-title" :to="`/${content.id}`">
-            {{ content.title }}
+        <div class="heading text-center">
+          <h2>一覧</h2>
+        </div>
+            <div class="col-md-12">
+                          <div class="row">
+
+        <div class="col-md-4" v-for="content in contents" :key="content">
+            <a class="card__cover" href="/{{ content.id }}">
+            <picture v-if="content.thumbnail">
+            <!--<source
+            media="(min-width: 768px)"
+            type="image/webp"
+            :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
+            />
+            <source
+            media="(max-width: 768px)"
+            type="image/webp"
+            :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
+            />-->
+            <img
+            :src="`${content.thumbnail.url}?w=350`"
+            class=""
+            alt
+            />
+            </picture>
+            </a>
+            <div class="card__content">
+              <h5 class="card__content-category"></h5>
+              <nuxt-link class="card__content-title" :to="`/${content.id}`">
+              {{ content.title }}
             </nuxt-link>
-            <div class="card__content-info">
-              <div class="info__time"><i class="far fa-clock"></i>
-                <p>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
-              </div>
-              <div class="info__comment"><i class="far fa-comment"></i>
-                <p></p>
-              </div>
+              <div class="card__content-info">
+                <div class="info__time">
+                  <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
+                </div>
             </div>
           </div>
         </div>
+
+        </div>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -46,6 +56,8 @@
 <script>
 import axios from 'axios'
 export default {
+
+
 async asyncData() {
 const { data } = await axios.get(
 // your-service-id
@@ -62,15 +74,10 @@ return data
 
 
 <style lang="scss" scoped>
-.bar.background-image-fixed-2 {
-    background-size: cover;
-    background-position-y: 50%;
-}
-
 .bar {
     position: relative;
     background: #858b92;
-    padding: 60px 0;
+    padding: 300px 0;
 }
 .no-mb {
     margin-bottom: 0 !important;
@@ -86,12 +93,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-user agent stylesheet
 section {
     display: block;
 }
 .blog{
   width: 800px;
   margin: auto;
+}
+.background-image1 {
+  background-image: url("~@/assets/images/backgrounds/toppic001.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center center;
 }
 </style>

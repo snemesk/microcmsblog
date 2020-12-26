@@ -10,13 +10,13 @@
 
 <script>
 	import Header from "@/components/header.vue"; // headerをインポート
-	import Footer from "@/components/footer.vue"; // footerをインポート
+  import Footer from "@/components/footer.vue"; // footerをインポート
 	export default {
 		components: {
 			Header,
-			Footer
+      Footer,
 		}
-	};
+	}
 </script>
 <style>
 * {
@@ -27,7 +27,6 @@
 		min-height: 600px;
 		background-color: #ddd;
 		text-align: center;
-		padding: 30px;
 	}
 	.page-enter-active,
 	.page-leave-active {
