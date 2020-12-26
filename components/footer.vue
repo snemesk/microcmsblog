@@ -1,6 +1,8 @@
 <template>
 		<footer>
-      footer
+      <div class="copyright">
+          <p>© 2020, Obisuki. All rights reserved.</p>
+      </div>
     </footer>
 </template>
 <script>
@@ -8,8 +10,7 @@
 </script>
 <style lang="scss" scoped>
 footer {
-	padding: 20px;
-	font-size: 30px;
+	font-size: 14px;
 	font-weight: bold;
 }
 </style>
