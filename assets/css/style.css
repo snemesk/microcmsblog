@@ -2971,7 +2971,8 @@ footer {
 ***************************/
 .about-us {
   font-size: 16;
-  margin-bottom: 4.375rem; }
+  padding-bottom: 4.375rem;
+}
   .about-us__image {
     width: 100%;
     padding-right: 1.875em; }

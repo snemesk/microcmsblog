@@ -16,16 +16,6 @@
         <div class="col-md-4" v-for="content in contents" :key="content">
             <a class="card__cover" href="/{{ content.id }}">
             <picture v-if="content.thumbnail">
-            <!--<source
-            media="(min-width: 768px)"
-            type="image/webp"
-            :srcset="`${content.thumbnail.url}?w=600&fm=webp, ${content.thumbnail.url}?w=1200&fm=webp 2x`"
-            />
-            <source
-            media="(max-width: 768px)"
-            type="image/webp"
-            :srcset="`${content.thumbnail.url}?w=375&fm=webp, ${content.thumbnail.url}?w=750&fm=webp 2x`"
-            />-->
             <img
             :src="`${content.thumbnail.url}?w=350`"
             class=""
@@ -45,7 +35,14 @@
             </div>
           </div>
         </div>
-
+  <v-card class="mx-auto">
+    <v-card-title>
+      <v-icon large left color="#26c6da">twitter</v-icon>
+    </v-card-title>
+    <v-flex xs12>
+      <Timeline :id="user_id" sourceType="profile" :options="{ tweetLimit: '3' }"/>
+    </v-flex>
+  </v-card>
         </div>
         </div>
       </div>
@@ -54,9 +51,17 @@
 </template>
 
 <script>
+import {Timeline} from 'vue-tweet-embed'
 import axios from 'axios'
 export default {
-
+  components: {
+    Timeline
+  },
+  data: function() {
+    return {
+      user_id: "obisuki_food"
+    };
+  },
 
 async asyncData() {
 const { data } = await axios.get(
