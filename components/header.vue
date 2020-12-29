@@ -1,7 +1,10 @@
 <template>
     <header>
       <div class="container">
-        <div class="header-wrapper"><a class="header__logo" href="/">test</a>
+        <div class="header-wrapper">
+          <div class="title">
+          <a class="header__logo" href="/">Obisuki</a>
+          </div>
           <nav>
             <ul>
               <li class="nav-item"><a href="/">Home</a>
@@ -20,3 +23,19 @@
       </div>
     </header>
 </template>
+
+<style scoped>
+.title{
+    color: #111;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1em;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    position: relative;
+    padding: 8px 0;
+    overflow: hidden;
+    display: inline-block;
+}
+</style>
