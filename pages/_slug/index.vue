@@ -1,5 +1,5 @@
 <template>
-<div id="content">
+<div id="content" class="breadcrumb-pd">
 <main class="main">
 <picture v-if="thumbnail">
 <source
@@ -25,6 +25,7 @@
 </main>
 </div>
 </template>
+
 <script>
 import axios from 'axios'
 export default {
@@ -40,38 +41,60 @@ return data
 }
 </script>
 <style lang="scss" scoped>
+
+.content{
+    padding-top: 80px;
+}
 .main {
-width: 960px;
-margin: 0 auto;
+  width: 960px;
+  margin-top:20px;
+  margin: 0 auto;
+  padding:0 20px;
 }
+
 .title {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  }
+
 .publishedAt {
 margin-bottom: 40px;
+text-align: left;
 }
 .post {
-& > h1 {
-font-size: 30px;
-font-weight: bold;
-margin: 40px 0 20px;
-background-color: #eee;
-padding: 10px 20px;
-border-radius: 5px;
+  text-align: left;
+  margin: auto;
+
+.twitter-tweet{
+
 }
-& > h2 {
-font-size: 24px;
-font-weight: bold;
-margin: 40px 0 16px;
-border-bottom: 1px solid #ddd;
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  background-color: #eee;
+  padding: 10px 20px;
+  border-radius: 5px;
+  }
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 40px 0 16px;
+  border-bottom: 1px solid #ddd;
 }
-& > p {
-line-height: 1.8;
-letter-spacing: 0.2px;
+p {
+  line-height: 1.8;
+  letter-spacing: 0.2px;
 }
-& > ol {
-list-style-type: decimal;
-list-style-position: inside;
-}
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  }
 }
 </style>

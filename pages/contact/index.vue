@@ -7,24 +7,24 @@
                 <li class="active"><a href="#">Contact</a></li>
               </ul>
             </div>
-
-<form name="contact" method="POST" data-netlify="true">
-  <p>
-<input type="hidden" name="form-name" value="contact" />
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-    <!-- /.p-contact__form -->
-  </div>
-</div>
-    </div>
+      <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="contactform">
+          <label>お名前：<input type="text" name="name" placeholder="名前" /></label>
+          <label>メールアドレス：<input type="email" name="email" placeholder="メールアドレス" /></label>
+          <label>メッセージ：<textarea name="message" placeholder="メッセージ" rows="3"></textarea></label>
+          </div>
+          <button type="submit">Send</button>
+      </form>
+          <!-- /.p-contact__form -->
+        </div>
+      </div>
 </template>
+
+<style lang="scss" scoped>
+.contactform{
+  margin:12px 0;
+
+}
+</style>
+
