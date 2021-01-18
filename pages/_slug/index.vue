@@ -18,8 +18,8 @@
     alt
 />
 </picture>
-<h1 class="title">{{ title }}</h1>
 <p class="publishedAt">{{ new Date(publishedAt).toLocaleDateString() }}</p>
+<h1 class="title">{{ title }}</h1>
 <p class="category">{{ category && category.name }}</p>
 <div class="post" v-html="body"></div>
 </main>
@@ -41,7 +41,19 @@ return data
 }
 </script>
 <style lang="scss" scoped>
-
+.category{
+    background-color: #467fbf;
+    color: #ffffff;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: none;
+    letter-spacing: 0.08em;
+    font-weight: 300;
+    font-size: 12px;
+    opacity: 0.7;
+    display: inline-block;
+}
 .content{
     padding-top: 80px;
 }
