@@ -20,7 +20,7 @@
 </picture>
 <p class="publishedAt">{{ new Date(publishedAt).toLocaleDateString() }}</p>
 <h1 class="title">{{ title }}</h1>
-<div class="category">{{ category && category.name }}</div>
+<p class="category">{{ category && category.name }}</p>
 <div class="post" v-html="body"></div>
 </main>
 </div>
