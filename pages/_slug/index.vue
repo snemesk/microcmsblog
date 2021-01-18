@@ -41,6 +41,7 @@ return data
 }
 </script>
 <style lang="scss" scoped>
+
 .category{
     background-color: #467fbf;
     color: #ffffff;
@@ -54,7 +55,7 @@ return data
     opacity: 0.7;
     display: inline-block;
     text-align: left;
-
+    margin-bottom: 2em;
 }
 .content{
     padding-top: 80px;
