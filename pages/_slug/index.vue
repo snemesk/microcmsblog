@@ -20,7 +20,7 @@
 </picture>
 <p class="publishedAt">{{ new Date(publishedAt).toLocaleDateString() }}</p>
 <h1 class="title">{{ title }}</h1>
-<p class="category">{{ category && category.name }}</p>
+<div class="category">{{ category && category.name }}</div>
 <div class="post" v-html="body"></div>
 </main>
 </div>
@@ -53,6 +53,8 @@ return data
     font-size: 12px;
     opacity: 0.7;
     display: inline-block;
+    text-align: left;
+
 }
 .content{
     padding-top: 80px;
