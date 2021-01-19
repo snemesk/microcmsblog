@@ -18,9 +18,11 @@
     alt
 />
 </picture>
-<p class="publishedAt">{{ new Date(publishedAt).toLocaleDateString() }}</p>
 <h1 class="title">{{ title }}</h1>
+<div class="left">
+<p class="publishedAt">{{ new Date(publishedAt).toLocaleDateString() }}</p>
 <p class="category">{{ category && category.name }}</p>
+</div>
 <div class="post" v-html="body"></div>
 </main>
 </div>
@@ -42,20 +44,18 @@ return data
 </script>
 <style lang="scss" scoped>
 
-.category{
-    background-color: #467fbf;
-    color: #ffffff;
-    right: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-transform: none;
-    letter-spacing: 0.08em;
-    font-weight: 300;
-    font-size: 12px;
-    opacity: 0.7;
-    display: inline-block;
-    text-align: left;
+.category {
+  background-color: #467fbf;
+//  color: #ffffff;
+//  letter-spacing: 0.08em;
+//  font-weight: 300;
+///  font-size: 12px;
+  display: inline-block;
     margin-bottom: 2em;
+}
+.left{
+    text-align: left;
+
 }
 .content{
     padding-top: 80px;
@@ -80,15 +80,12 @@ h1{
 
 .publishedAt {
 margin-bottom: 40px;
-text-align: left;
 }
 .post {
   text-align: left;
   margin: auto;
 
-.twitter-tweet{
 
-}
 h1 {
   font-size: 30px;
   font-weight: bold;
