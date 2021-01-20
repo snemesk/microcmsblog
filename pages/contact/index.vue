@@ -24,7 +24,7 @@
 </template>
 
 <style lang="scss" scoped>
-.contactform{
+.input{
   width: 360px;
   padding: 5px 8px;
   border-radius: 6px;
