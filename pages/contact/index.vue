@@ -11,7 +11,9 @@
           <input type="hidden" name="form-name" value="contact" />
           <div class="contactform">
           <label>お名前：<input type="text" name="name" placeholder="名前" /></label>
+
           <label>メールアドレス：<input type="email" name="email" placeholder="メールアドレス" /></label>
+
           <label>メッセージ：<textarea name="message" placeholder="メッセージ" rows="3"></textarea></label>
           </div>
           <button type="submit">Send</button>
@@ -23,8 +25,16 @@
 
 <style lang="scss" scoped>
 .contactform{
-  margin:12px 0;
-
+  width: 360px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none
+  background-color: #ddd;
+  font-size: 16px;
 }
 </style>
 

@@ -49,7 +49,7 @@ return data
 //  color: #ffffff;
 //  letter-spacing: 0.08em;
 //  font-weight: 300;
-///  font-size: 12px;
+//  font-size: 12px;
   display: inline-block;
     margin-bottom: 2em;
 }
