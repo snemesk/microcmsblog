@@ -7,33 +7,51 @@
                 <li class="active"><a href="#">Contact</a></li>
               </ul>
             </div>
-      <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <div class="contactform">
-          <label>お名前：<input type="text" name="name" placeholder="名前" /></label>
-
-          <label>メールアドレス：<input type="email" name="email" placeholder="メールアドレス" /></label>
-
-          <label>メッセージ：<textarea name="message" placeholder="メッセージ" rows="3"></textarea></label>
-          </div>
-          <button type="submit">Send</button>
-      </form>
-          <!-- /.p-contact__form -->
-        </div>
+<div class="center">
+            <div class="contactform">
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+              <dl>
+                <dt>お名前：</dt>
+                <dd><input type="text" name="name" placeholder="名前" /></dd>
+                <dt>メールアドレス：</dt>
+                <dd><input type="email" name="email" placeholder="メールアドレス" /></dd>
+                <dt>メッセージ：</dt>
+                <dd><textarea name="message" placeholder="メッセージ" rows="4"></textarea></dd>
+              </dl>
+              <button type="submit">Send</button>
+            </form>
+            </div>
+</div>
+                <!-- /.p-contact__form -->
       </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-.input{
-  width: 360px;
+
+form{
+  background-color: #eaeaea;
+  padding:30px 50px;
+}
+
+form dl dt{
+  width: 165px;
+  padding:10px 0;
+  float:left;
+  clear:both;
+}
+
+form dl dd{
+  padding:10px 0;
+}
+input,textarea{
+  background-color: #ffffff;
+}
+.contactform{
+  width: 500px;
   padding: 5px 8px;
   border-radius: 6px;
-  border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa;
-  border-right: 2px solid #aaa;
-  border-bottom: 2px solid #aaa;
-  background-image: none
-  background-color: #ddd;
   font-size: 16px;
 }
 </style>
