@@ -50,6 +50,7 @@ input,textarea{
 }
 .contactform{
   width: 500px;
+  margin: auto;
   padding: 5px 8px;
   border-radius: 6px;
   font-size: 16px;
