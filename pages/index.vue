@@ -23,9 +23,10 @@
                   </a>
                   <div class="card__content">
                   <h5 class="card__content-category"></h5>
-                  <!--<nuxt-link class="card__content-title" :to="`/${content.id}`">
+
+                  <nuxt-link class="card__content-title" :to="`/${content.id}`">
                     {{ content.title }}
-                  </nuxt-link> -->
+                  </nuxt-link>
                     <div class="card__content-info">
                       <div class="info__time">
                         <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>

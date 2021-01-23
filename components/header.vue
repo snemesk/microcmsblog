@@ -10,16 +10,16 @@
               <li class="nav-item"><a href="/">Home</a>
               </li>
               <li class="nav-item">
-                <nuxt-link href="/about">About</nuxt-link>
+                <nuxt-link :to="`/about`">About</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link href="/contact">Contact</nuxt-link>
+                <nuxt-link :to="`/contact`">Contact</nuxt-link>
               </li>
             </ul>
           </nav>
           <div class="header__icon-group">
             <div class="social">
-              <a href="https://twitter.com/2MByte_nesk"><i class="fab fa-twitter-square"></i></a>
+              <a href="https://twitter.com/obisuki_food"><i class="fab fa-twitter-square"></i></a>
             </div>
           </div>
         </div>
