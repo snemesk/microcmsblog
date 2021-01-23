@@ -16,17 +16,14 @@
           <div class="row">
               <div class="col-md-4" v-for="content in contents" :key="content">
                 <div class="microcms">
-                  <a class="card__cover" href="/${{ content.id }}">
+                  <a class="card__cover" :href="`{{ content.id }}`">
                   <picture v-if="content.thumbnail">
                     <img　:src="`${content.thumbnail.url}?w=200`"class=""alt/>
                   </picture>
                   </a>
                   <div class="card__content">
                   <h5 class="card__content-category"></h5>
-
-                  <nuxt-link class="card__content-title" :to="`/${content.id}`">
-                    {{ content.title }}
-                  </nuxt-link>
+                   <a :href="content.id">{{ content.title }}</a>
                     <div class="card__content-info">
                       <div class="info__time">
                         <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
