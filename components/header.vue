@@ -9,8 +9,11 @@
             <ul>
               <li class="nav-item"><a href="/">Home</a>
               </li>
-              <li class="nav-item"><a href="/about">About</a></li>
-                            <li class="nav-item"><a href="/contact">Contact</a>
+              <li class="nav-item">
+                <nuxt-link href="/about">About</nuxt-link>
+              </li>
+              <li class="nav-item">
+                <nuxt-link href="/contact">Contact</nuxt-link>
               </li>
             </ul>
           </nav>
