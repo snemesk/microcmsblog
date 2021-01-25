@@ -61,7 +61,7 @@ return data
     padding-top: 80px;
 }
 .main {
-  width: 960px;
+  max-width: 700px;
   margin-top:20px;
   margin: 0 auto;
   padding:0 20px;
