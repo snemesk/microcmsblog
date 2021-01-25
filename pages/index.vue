@@ -23,7 +23,8 @@
                   </a>
                   <div class="card__content">
                   <h5 class="card__content-category"></h5>
-                   <a :href="content.id">{{ content.title }}</a>
+                   <a :href="`/${content.id}`">{{ content.title }}</a>
+
                     <div class="card__content-info">
                       <div class="info__time">
                         <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
