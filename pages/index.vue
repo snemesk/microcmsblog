@@ -37,7 +37,7 @@
 
 
               </div>
-
+<!--
               <div class="col-md-6 offset-md-3">
                 <v-card class="mx-auto">
                 <v-card-title>
@@ -48,7 +48,7 @@
                 </v-flex>
                 </v-card>
               </div>
-
+-->
               </div>
 
 
