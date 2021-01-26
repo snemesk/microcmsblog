@@ -3,11 +3,13 @@
       <div class="container">
         <div class="header-wrapper">
           <div class="title">
+
           <a class="header__logo" href="/">Obisuki</a>
           </div>
           <nav>
             <ul>
-              <li class="nav-item"><a href="/">Home</a>
+              <li class="nav-item">
+                <nuxt-link :to="`/`">Home</nuxt-link>
               </li>
               <li class="nav-item">
                 <nuxt-link :to="`/about`">About</nuxt-link>
