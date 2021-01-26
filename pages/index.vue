@@ -23,8 +23,9 @@
                   </a>
                   <div class="card__content">
                   <h5 class="card__content-category"></h5>
-                   <a :href="`/${content.id}`">{{ content.title }}</a>
-
+                  <nuxt-link class="card__content-title" :to="`/${content.id}`">
+                    {{ content.title }}
+                  </nuxt-link>
                     <div class="card__content-info">
                       <div class="info__time">
                         <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
@@ -37,7 +38,7 @@
 
 
               </div>
-<!--
+
               <div class="col-md-6 offset-md-3">
                 <v-card class="mx-auto">
                 <v-card-title>
@@ -48,7 +49,7 @@
                 </v-flex>
                 </v-card>
               </div>
--->
+
               </div>
 
 
