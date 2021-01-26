@@ -23,6 +23,16 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        hid: 'twitter',
+        type: 'text/javascript',
+        src: '//platform.twitter.com/widgets.js',
+        async: true,
+        defer: true,
+        body: true
+      }
     ]
   },
   /*
