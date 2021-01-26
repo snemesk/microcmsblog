@@ -41,6 +41,11 @@ headers: { 'X-API-KEY': 'c7ad9a8b-095d-47ca-a933-2af56bc189dc' }
 return data
 }
 }
+ mounted() {
+    if (twttr) {
+      twttr.widgets.load()
+    }
+  }
 </script>
 <style lang="scss" scoped>
 
