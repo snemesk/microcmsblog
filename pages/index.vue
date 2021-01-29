@@ -11,8 +11,6 @@
         <div class="heading text-center">
           <h3>News一覧</h3>
         </div>
-
-
           <div class="row">
               <div class="col-md-4" v-for="content in contents" :key="content">
                 <div class="microcms">
@@ -34,9 +32,6 @@
                   </div>
                 </div>
                </div>
-
-
-
               </div>
 
               <div class="col-md-6 offset-md-3">
@@ -51,10 +46,6 @@
               </div>
 
               </div>
-
-
-
-
           </div>
           </div>
 </template>
