@@ -3,8 +3,7 @@
       <div class="container">
         <div class="header-wrapper">
           <div class="title">
-
-          <a class="header__logo" href="/">Obisuki</a>
+            <nuxt-link :to="`/`">Obisuki</nuxt-link>
           </div>
           <nav>
             <ul>
