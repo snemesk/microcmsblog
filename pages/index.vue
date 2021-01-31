@@ -11,29 +11,28 @@
         <div class="heading text-center">
           <h3>News一覧</h3>
         </div>
-          <div class="row">
-              <div class="col-md-4" v-for="content in contents" :key="content">
-                <div class="microcms">
-                  <a class="card__cover" :href="`{{ content.id }}`">
-                  <picture v-if="content.thumbnail">
-                    <img　:src="`${content.thumbnail.url}?w=200`"class=""alt/>
-                  </picture>
-                  </a>
-                  <div class="card__content">
-                  <h5 class="card__content-category"></h5>
-                  <nuxt-link class="card__content-title" :to="`/${content.id}`">
-                    {{ content.title }}
-                  </nuxt-link>
-                    <div class="card__content-info">
-                      <div class="info__time">
-                        <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
-                      </div>
+        <div class="row">
+          <div class="col-md-4" v-for="content in contents" :key="content">
+            <div class="microcms">
+              <a class="card__cover" :href="`{{ content.id }}`">
+                <picture v-if="content.thumbnail">
+                  <img　:src="`${content.thumbnail.url}?w=200`"class=""alt/>
+                </picture>
+              </a>
+              <div class="card__content">
+                <h5 class="card__content-category"></h5>
+                <nuxt-link class="card__content-title" :to="`/${content.id}`">
+                  {{ content.title }}
+                </nuxt-link>
+                  <div class="card__content-info">
+                    <div class="info__time">
+                      <p><i class="far fa-clock"></i>{{ new Date(content.publishedAt).toLocaleDateString() }}</p>
                     </div>
                   </div>
-                </div>
-               </div>
               </div>
-
+            </div>
+            </div>
+            </div>
               <div class="col-md-6 offset-md-3">
                 <v-card class="mx-auto">
                 <v-card-title>
@@ -44,7 +43,6 @@
                 </v-flex>
                 </v-card>
               </div>
-
               </div>
           </div>
           </div>
