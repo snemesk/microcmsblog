@@ -118,4 +118,7 @@ section {
   background-repeat:no-repeat;
   background-position:center center;
 }
+.container{
+      padding-bottom: 100px;
+}
 </style>
