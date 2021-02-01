@@ -13,7 +13,7 @@
     :srcset="`${thumbnail.url}?w=375&fm=webp, ${thumbnail.url}?w=750&fm=webp 2x`"
     />
 <img
-    :src="`${thumbnail.url}?w=100%`"
+    :src="`${thumbnail.url}?w=1200`"
     class="thumbnail"
     alt
 />
@@ -52,7 +52,10 @@ return data
 .breadcrumb-pd{
   padding-bottom: 100px;
 }
-.
+.thumbnail{
+ width: 100%;
+}
+
 .category {
   background-color: #467fbf;
 //  color: #ffffff;
