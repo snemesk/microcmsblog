@@ -49,7 +49,9 @@ return data
 
 </script>
 <style lang="scss" scoped>
-
+.breadcrumb-pd{
+  padding-bottom: 100px;
+}
 .category {
   background-color: #467fbf;
 //  color: #ffffff;
