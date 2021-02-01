@@ -21,7 +21,7 @@
                   </p>
                 <div class="follow">
                   <p>ソーシャルアカウント</p>
-                  <div class="social-block"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                  <div class="social-block"><a href="https://twitter.com/obisuki_food"><i class="fab fa-twitter"></i></a></div>
                 </div>
               </div>
             </div>
